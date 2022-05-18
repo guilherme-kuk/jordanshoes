@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    background-color: #F9F9F9;
+}
+
+/* Header */
+#containerHeader {
+    width: 100%;
+}
+
+.info-frete {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+}
+
+.info-frete p {
+    font-size: 16px;
+    color: #F9F9F9;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #F9F9F9;
+}
+
+.name h1 {
+    font-size: 24px;
+    color: #181818;
+}
+
+.banner {
+    height: 378px;
+    background: linear-gradient(rgba(24, 24, 24, 0.6), rgba(24, 24, 24, 0.6)), url(/assets/img/banner-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner h2 {
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 100px;
+    font-size: 32px;
+    color: #F9F9F9;
+}
+
+.banner p {
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 100px;
+    width: 460px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #F9F9F9;
+}
+
+/* Produtos */
+.title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 32px;
+    height: 63px;
+    color: #181818;
+}
+
+.title p {
+    font-size: 18px;
+    color: #474747;
+}
+
+#products {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.card-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    width: 300px;
+    height: 300px;
+    background-color: #EBE9EA;
+}
+
+.card-item img {
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    background-color: #181818;
+    color: #F9F9F9;
+}
+
+/* Modal */
+#bgModal {
+    position: fixed;
+    top: 0;
+    background: rgba(24, 24, 24, 0.4);
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    right: 0;
+    display: none;
+}
+
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #EBE9EA;
+    width: 800px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+#imgModal {
+    width: 700px;
+}
+
+#btnClose {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    color: #EBE9EA;
+    background-color: #181818;
+    padding: 10px 20px;
+    font-size: 40px;
+    border: 1px solid #EBE9EA;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#bgModal.modal-active,
+#modal.modal-active {
+    display: block !important;
+}
+
+/* para ocultar scroll no modal */
+.scroll {
+    overflow: hidden;
+}
+/* Responsivo */
+
+@media screen and (max-width: 1440px) {
+
+    .info-frete {
+        height: 60px;
+    }
+    
+    .info-frete p {
+        font-size: 16px;
+    }
+    
+    .name {
+        height: 60px;
+    }
+    
+    .name h1 {
+        font-size: 24px;
+    }
+    
+    .banner {
+        height: 378px;
+    }
+    
+    .banner h2 {
+        margin-top: 130px;
+        font-size: 32px;
+    }
+    
+    .banner p {
+        margin-top: 190px;
+        width: 460px;
+        font-size: 18px;
+    }
+    
+    .title h2 {
+        font-size: 32px;
+    }
+    
+    .title p {
+        font-size: 18px;
+    }
+    
+    .card-item {
+        margin: 6px;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .card-item img {
+        width: 250px;
+        height: 150px;
+    }
+    
+    /* Rodapé */
+    footer {
+        height: 60px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .info-frete {
+        height: 50px;
+    }
+    
+    .info-frete p {
+        font-size: 14px;
+    }
+    
+    .name {
+        height: 50px;
+    }
+    
+    .name h1 {
+        font-size: 20px;
+    }
+    
+    .banner {
+        height: 320px;
+    }
+    
+    .banner h2 {
+        margin-top: 100px;
+        margin-left: 60px;
+        font-size: 26px;
+    }
+    
+    .banner p {
+        margin-top: 150px;
+        margin-left: 60px;
+        width: 360px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .title {
+        margin-top: 30px;
+    }
+    
+    .title h2 {
+        font-size: 32px;
+    }
+    
+    .title p {
+        font-size: 18px;
+    }
+
+    #products {
+        margin-top: 40px;
+    }
+    
+    .card-item {
+        margin: 6px;
+        width: 230px;
+        height: 230px;
+    }
+    
+    .card-item img {
+        width: 220px;
+        height: 140px;
+    }
+    
+    /* Rodapé */
+    footer {
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .info-frete {
+        height: 40px;
+    }
+    
+    .info-frete p {
+        font-size: 12px;
+    }
+    
+    .name {
+        height: 40px;
+    }
+    
+    .name h1 {
+        font-size: 16px;
+    }
+    
+    .banner {
+        height: 300px;
+    }
+    
+    .banner h2 {
+        margin-top: 80px;
+        margin-left: 40px;
+        font-size: 24px;
+    }
+    
+    .banner p {
+        margin-top: 120px;
+        margin-left: 40px;
+        width: 340px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .title {
+        margin-top: 28px;
+    }
+    
+    .title h2 {
+        font-size: 26px;
+        height: 42px;
+    }
+    
+    .title p {
+        font-size: 14px;
+    }
+
+    #products {
+        margin-top: 26px;
+    }
+
+    .row {
+        margin-bottom: 0;
+    }
+
+    .card-item {
+        margin: 6px;
+        width: 160px;
+        height: 160px;
+    }
+    
+    .card-item img {
+        width: 160px;
+        height: 100px;
+    }
+    
+    /* Rodapé */
+    footer {
+        height: 40px;
+        font-size: 12px;
+        margin-top: 40px;
+    }
+
+    #modal {
+        width: 650px;
+    }
+    
+    #imgModal {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .info-frete {
+        height: 60px;
+    }
+    
+    .info-frete p {
+        font-size: 16px;
+    }
+    
+    .name {
+        height: 60px;
+    }
+    
+    .name h1 {
+        font-size: 24px;
+    }
+    
+    .banner {
+        height: 377px;
+    }
+    
+    .banner h2 {
+        margin-top: 120px;
+        margin-left: 20px;
+        font-size: 28px;
+    }
+    
+    .banner p {
+        margin-top: 170px;
+        margin-left: 20px;
+        width: 357px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .title {
+        margin-top: 50px;
+        align-items: center;
+    }
+    
+    .title h2 {
+        font-size: 28px;
+        height: 55px;
+    }
+    
+    .title p {
+        font-size: 16px;
+        width: 374px;
+        line-height: 28px;
+    }
+
+    #products {
+        margin-top: 60px;
+    }
+
+    .row {
+        margin-bottom: 0;
+    }
+
+    .card-item {
+        margin-bottom: 20px;
+        width: 370px;
+        height: 300px;
+    }
+    
+    .card-item img {
+        width: 250px;
+        height: 150px;
+    }
+    
+    /* Rodapé */
+    footer {
+        height: 60px;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    #modal {
+        width: 400px;
+        padding: 20px;
+    }
+    
+    #imgModal {
+        width: 350px;
+    }
+
+    #btnClose {
+        top: -50px;
+        right: -5px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .info-frete {
+        height: 50px;
+    }
+    
+    .info-frete p {
+        font-size: 14px;
+    }
+    
+    .name {
+        height: 50px;
+    }
+    
+    .name h1 {
+        font-size: 22px;
+    }
+    
+    .banner {
+        height: 340px;
+    }
+    
+    .banner h2 {
+        margin-top: 100px;
+        margin-left: 20px;
+        font-size: 24px;
+    }
+    
+    .banner p {
+        margin-top: 150px;
+        margin-left: 20px;
+        width: 340px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .title {
+        margin-top: 40px;
+        align-items: center;
+    }
+    
+    .title h2 {
+        font-size: 28px;
+        height: 55px;
+    }
+    
+    .title p {
+        font-size: 16px;
+        width: 374px;
+        line-height: 28px;
+    }
+
+    #products {
+        margin-top: 40px;
+    }
+
+    .row {
+        margin-bottom: 0;
+    }
+
+    .card-item {
+        margin-bottom: 10px;
+        width: 350px;
+        height: 220px;
+    }
+    
+    .card-item img {
+        width: 250px;
+        height: 150px;
+    }
+    
+    /* Rodapé */
+    footer {
+        height: 50px;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    #modal {
+        width: 360px;
+        padding: 10px;
+    }
+    
+    #imgModal {
+        width: 330px;
+    }
+
+    #btnClose {
+        top: -50px;
+        right: -2px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    .banner h2 {
+        font-size: 20px;
+    }
+    
+    .banner p {
+        width: 270px;
+        font-size: 16px;
+    }
+    
+    .title h2 {
+        font-size: 26px;
+    }
+    
+    .title p {
+        font-size: 14px;
+        width: 280px;
+        line-height: 26px;
+    }
+
+    #products {
+        margin-top: 30px;
+    }
+
+    .card-item {
+        margin-bottom: 5px;
+        width: 280px;
+        height: 200px;
+    }
+    
+    .card-item img {
+        width: 200px;
+        height: 120px;
+    }
+
+    #modal {
+        width: 300px;
+        padding: 0;
+    }
+    
+    #imgModal {
+        width: 280px;
+    }
+}
